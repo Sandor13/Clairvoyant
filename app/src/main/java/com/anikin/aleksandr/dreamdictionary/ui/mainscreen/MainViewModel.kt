@@ -5,12 +5,14 @@ import android.arch.lifecycle.MutableLiveData
 import android.arch.lifecycle.ViewModel
 import com.anikin.aleksandr.dreamdictionary.data.repository.Repository
 
-class MainViewModel : ViewModel() {
+class MainViewModel(repository: Repository = Repository) : ViewModel() {
 
     private val viewStateLiveData: MutableLiveData<MainViewState> = MutableLiveData()
 
     init {
-        viewStateLiveData.value = MainViewState(Repository.notes)
+        repository.getNotesLiveData().observeForever {
+            viewStateLiveData.value = viewStateLiveData.value?.copy(notes = it!!) ?: MainViewState(it!!)
+        }
     }
 
     fun getViewState(): LiveData<MainViewState> = viewStateLiveData
