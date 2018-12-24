@@ -1,5 +1,6 @@
-package com.anikin.aleksandr.dreamdictionary.ui.shared
+package com.anikin.aleksandr.dreamdictionary.view.shared
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.support.design.widget.CoordinatorLayout
 import android.support.design.widget.FloatingActionButton
@@ -25,6 +26,7 @@ class FabBehavior(context: Context, attributeSet: AttributeSet) : FloatingAction
         )
     }
 
+    @SuppressLint("RestrictedApi")
     override fun onNestedScroll(
         coordinatorLayout: CoordinatorLayout,
         child: FloatingActionButton,

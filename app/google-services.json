@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "736601321335",
+    "firebase_url": "https://dream-dictionary-2340d.firebaseio.com",
+    "project_id": "dream-dictionary-2340d",
+    "storage_bucket": "dream-dictionary-2340d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:736601321335:android:de82e9d51cc94803",
+        "android_client_info": {
+          "package_name": "com.anikin.aleksandr.dreamdictionary"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "736601321335-9080b3kk4k984i51d0jk6soa19i4kkam.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAPWJFA8ULN07UszGH8Y-5BVkpwM5cAstg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

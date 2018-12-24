@@ -3,4 +3,12 @@
     <string name="toolbar_title_my_notes">My Notes</string>
     <string name="new_note_title">New note</string>
     <string name="title_activity_main2">Main2Activity</string>
+    <string name="snackbar_button_ok">OK</string>
+    <string name="logout_menu_title">Logout</string>
+    <string name="logout_dialog_title">Logout?</string>
+    <string name="logout_dialog_message">All notes will be saved in the cloud.</string>
+    <string name="logout_dialog_cancel">Cancel</string>
+    <string name="logout_dialog_ok">OK</string>
+    <string name="change_color_menu_title">Change colour</string>
+    <string name="delete_menu_title">Delete note</string>
 </resources>

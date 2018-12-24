@@ -39,5 +39,5 @@
         app:fabSize="normal"
         app:layout_anchor="@id/main_recyclerview"
         app:layout_anchorGravity="bottom|end"
-        app:layout_behavior="com.anikin.aleksandr.dreamdictionary.ui.shared.FabBehavior" />
+        app:layout_behavior="com.anikin.aleksandr.dreamdictionary.view.shared.FabBehavior" />
 </android.support.design.widget.CoordinatorLayout>
