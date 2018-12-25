@@ -38,7 +38,7 @@ abstract class BaseActivity<T, S : BaseViewState<T>> : AppCompatActivity() {
 
     abstract fun renderData(data: T)
 
-    //FIXME Trash with main_recyclerview
+    //FIXME main_recyclerview
     protected fun showError(error: String) {
         Snackbar.make(main_recyclerview, error, Snackbar.LENGTH_INDEFINITE).apply {
             setAction(R.string.snackbar_button_ok) { this.dismiss() }

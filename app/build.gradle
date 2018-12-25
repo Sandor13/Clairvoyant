@@ -42,6 +42,9 @@ dependencies {
     //AAC
     // LiveData & ViewModel
     implementation 'android.arch.lifecycle:extensions:1.1.1'
+    //Room database
+    implementation "android.arch.persistence.room:runtime:1.1.1"
+    kapt "android.arch.persistence.room:compiler:1.1.1"
 
     //Firebase Firestore
     implementation 'com.google.firebase:firebase-core:16.0.3'
