@@ -4,5 +4,5 @@ import com.anikin.aleksandr.dreamdictionary.data.room.DreamDictionaryEntity
 
 object DataBaseEntityMapper {
 
-    fun map(entity: DreamDictionaryEntity?): DefinitionResult = DefinitionResult.Success(Definition("", ""))
+    fun map(entity: DreamDictionaryEntity?): DefinitionDataModel = DefinitionDataModel.Success(Definition("", ""))
 }

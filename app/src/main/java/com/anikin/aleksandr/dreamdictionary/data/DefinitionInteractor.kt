@@ -4,5 +4,5 @@ import android.arch.lifecycle.LiveData
 
 interface DefinitionInteractor {
 
-    fun getDefinitionByKeyword(keyword: String): LiveData<DefinitionResult>
+    fun getDefinitionByKeyword(keyword: String): LiveData<DefinitionDataModel>
 }
