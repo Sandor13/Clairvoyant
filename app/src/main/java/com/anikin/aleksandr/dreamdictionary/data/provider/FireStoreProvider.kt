@@ -1,16 +1,21 @@
 package com.anikin.aleksandr.dreamdictionary.data.provider
 
+import android.arch.lifecycle.LiveData
+import android.arch.lifecycle.MutableLiveData
 import com.anikin.aleksandr.dreamdictionary.data.errors.NoAuthException
-import com.anikin.aleksandr.dreamdictionary.data.model.Note
 import com.anikin.aleksandr.dreamdictionary.data.model.NoteResult
 import com.anikin.aleksandr.dreamdictionary.data.model.User
+import com.anikin.aleksandr.dreamdictionary.data.models.Note
+import com.google.android.gms.tasks.OnFailureListener
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.FirebaseFirestore
 
 class FireStoreProvider
- /*
- Koin
- (
-    private val firebaseAuth: FirebaseAuth,
-    private val db: FirebaseFirestore
+/*
+Koin
+(
+   private val firebaseAuth: FirebaseAuth,
+   private val db: FirebaseFirestore
 )*/
 
     : RemoteDataProvider {

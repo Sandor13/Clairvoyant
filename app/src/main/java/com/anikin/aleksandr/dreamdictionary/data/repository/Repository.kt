@@ -1,30 +1,19 @@
 package com.anikin.aleksandr.dreamdictionary.data.repository
 
-import com.anikin.aleksandr.dreamdictionary.data.model.Note
-import com.anikin.aleksandr.dreamdictionary.data.provider.FireStoreProvider
-import com.anikin.aleksandr.dreamdictionary.data.provider.RemoteDataProvider
+import android.arch.lifecycle.LiveData
+import com.anikin.aleksandr.dreamdictionary.data.model.NoteResult
+import com.anikin.aleksandr.dreamdictionary.data.model.User
+import com.anikin.aleksandr.dreamdictionary.data.models.Note
 
-object Repository {
+interface Repository {
 
-    private val remoteProvider: RemoteDataProvider = FireStoreProvider()
+    fun getNotes(): LiveData<NoteResult>
 
-    fun getNotes() = remoteProvider.subscribeToAllNotes()
+    fun saveNote(note: Note): LiveData<NoteResult>
 
-    fun saveNote(note: Note) = remoteProvider.saveNote(note)
+    fun getNoteById(id: String): LiveData<NoteResult>
 
-    fun getNoteById(id: String) = remoteProvider.getNoteById(id)
+    fun getCurrentUser(): LiveData<User?>
 
-    fun getCurrentUser() = remoteProvider.getCurrentUser()
-
-    fun deleteNote(noteId: String) = remoteProvider.deleteNote(noteId)
+    fun deleteNote(noteId: String): LiveData<NoteResult>
 }
-/*
-//Koin
-class Repository(private val remoteProvider: RemoteDataProvider) {
-
-    fun getNotes() = remoteProvider.subscribeToAllNotes()
-    fun saveNote(note: Note) = remoteProvider.saveNote(note)
-    fun getNoteById(id: String) = remoteProvider.getNoteById(id)
-    fun getCurrentUser() = remoteProvider.getCurrentUser()
-    fun deleteNote(noteId: String) = remoteProvider.deleteNote(noteId)
-}*/

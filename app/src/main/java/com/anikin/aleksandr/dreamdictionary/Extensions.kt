@@ -2,7 +2,7 @@ package com.anikin.aleksandr.dreamdictionary
 
 import android.content.Context
 import android.support.v4.content.ContextCompat
-import com.anikin.aleksandr.dreamdictionary.data.model.Color
+import com.anikin.aleksandr.dreamdictionary.data.models.Color
 import java.text.SimpleDateFormat
 import java.util.*
 
