@@ -16,8 +16,6 @@ import com.anikin.aleksandr.dreamdictionary.format
 import com.anikin.aleksandr.dreamdictionary.getColorInt
 import com.anikin.aleksandr.dreamdictionary.view.base.BaseActivity
 import com.anikin.aleksandr.dreamdictionary.view.managenote.NoteViewState.Data
-import kotlinx.android.synthetic.main.activity_note.*
-import org.koin.android.viewmodel.ext.android.viewModel
 import java.util.*
 
 private const val SAVE_DELAY = 200L
@@ -32,7 +30,7 @@ class NoteActivity : BaseActivity<Data, NoteViewState>() {
             Intent(context, NoteActivity::class.java).apply { putExtra(EXTRA_NOTE, id) }
     }
 
-    override val model: NoteViewModel by viewModel()
+    override val model: NoteViewModel by lazy { ViewModelProviders.of(this).get(NoteViewModel::class.java) }
     override val layoutRes: Int = R.layout.activity_note
     private var note: Note? = null
     private val textChangeListener = object : TextWatcher {

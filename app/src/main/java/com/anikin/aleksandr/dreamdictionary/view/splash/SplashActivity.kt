@@ -4,13 +4,12 @@ import android.os.Handler
 import com.anikin.aleksandr.dreamdictionary.R
 import com.anikin.aleksandr.dreamdictionary.view.base.BaseActivity
 import com.anikin.aleksandr.dreamdictionary.view.mainscreen.MainActivity
-import org.koin.android.viewmodel.ext.android.viewModel
 
 class SplashActivity : BaseActivity<Boolean?, SplashViewState>() {
 
     private val START_DELAY = 1000L
 
-    override val model: SplashViewModel by viewModel()
+    override val model: SplashViewModel by lazy { ViewModelProviders.of(this).get(SplashViewModel::class.java) }
 
     override val layoutRes: Int = R.layout.activity_splash
 

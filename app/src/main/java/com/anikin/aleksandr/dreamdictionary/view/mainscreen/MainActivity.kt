@@ -11,9 +11,6 @@ import com.anikin.aleksandr.dreamdictionary.data.model.Note
 import com.anikin.aleksandr.dreamdictionary.view.base.BaseActivity
 import com.anikin.aleksandr.dreamdictionary.view.managenote.NoteActivity
 import com.anikin.aleksandr.dreamdictionary.view.splash.SplashActivity
-import com.firebase.ui.auth.AuthUI
-import kotlinx.android.synthetic.main.activity_main.*
-import org.koin.android.viewmodel.ext.android.viewModel
 
 class MainActivity : BaseActivity<List<Note>?, MainViewState>(), LogoutDialog.LogoutListener {
 
@@ -21,7 +18,7 @@ class MainActivity : BaseActivity<List<Note>?, MainViewState>(), LogoutDialog.Lo
         fun getStartIntent(context: Context) = Intent(context, MainActivity::class.java)
     }
 
-    override val model: MainViewModel by viewModel()
+    override val model:  MainViewModel by lazy { ViewModelProviders.of(this).get(MainViewModel::class.java) }
 
     override val layoutRes: Int = R.layout.activity_main
     private lateinit var adapter: MainAdapter

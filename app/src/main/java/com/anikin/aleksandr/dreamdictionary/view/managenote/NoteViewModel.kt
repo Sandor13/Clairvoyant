@@ -1,6 +1,5 @@
 package com.anikin.aleksandr.dreamdictionary.view.managenote
 
-import android.arch.lifecycle.Observer
 import com.anikin.aleksandr.dreamdictionary.data.model.Note
 import com.anikin.aleksandr.dreamdictionary.data.model.NoteResult
 import com.anikin.aleksandr.dreamdictionary.data.model.NoteResult.Error
@@ -9,7 +8,7 @@ import com.anikin.aleksandr.dreamdictionary.data.repository.Repository
 import com.anikin.aleksandr.dreamdictionary.view.base.BaseViewModel
 import com.anikin.aleksandr.dreamdictionary.view.managenote.NoteViewState.Data
 
-class NoteViewModel(private val repository: Repository) : BaseViewModel<Data, NoteViewState>() {
+class NoteViewModel(/*//Koin private val repository: Repository*/private val repository: Repository = Repository) : BaseViewModel<Data, NoteViewState>() {
 
     private var pendingNote: Note? = null
     private val currentNote: Note?

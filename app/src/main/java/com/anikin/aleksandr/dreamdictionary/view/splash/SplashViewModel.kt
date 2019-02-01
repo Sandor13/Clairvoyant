@@ -4,7 +4,7 @@ import com.anikin.aleksandr.dreamdictionary.data.errors.NoAuthException
 import com.anikin.aleksandr.dreamdictionary.data.repository.Repository
 import com.anikin.aleksandr.dreamdictionary.view.base.BaseViewModel
 
-class SplashViewModel(private val repository: Repository) : BaseViewModel<Boolean?, SplashViewState>() {
+class SplashViewModel(/*Koin private val repository: Repository*/private val repository: Repository = Repository) : BaseViewModel<Boolean?, SplashViewState>() {
 
     fun requestUser() {
         repository.getCurrentUser().observeForever {

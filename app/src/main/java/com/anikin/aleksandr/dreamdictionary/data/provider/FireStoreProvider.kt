@@ -1,24 +1,24 @@
 package com.anikin.aleksandr.dreamdictionary.data.provider
 
-import android.arch.lifecycle.LiveData
-import android.arch.lifecycle.MutableLiveData
 import com.anikin.aleksandr.dreamdictionary.data.errors.NoAuthException
 import com.anikin.aleksandr.dreamdictionary.data.model.Note
 import com.anikin.aleksandr.dreamdictionary.data.model.NoteResult
 import com.anikin.aleksandr.dreamdictionary.data.model.User
-import com.google.android.gms.tasks.OnFailureListener
-import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.firestore.FirebaseFirestore
 
-class FireStoreProvider(
+class FireStoreProvider
+ /*
+ Koin
+ (
     private val firebaseAuth: FirebaseAuth,
     private val db: FirebaseFirestore
-) : RemoteDataProvider {
+)*/
+
+    : RemoteDataProvider {
 
     private val NOTES_COLLECTION = "notes"
     private val USERS_COLLECTION = "users"
 
-    private val notesReference = db.collection(NOTES_COLLECTION)
+    private val db = FirebaseFirestore.getInstance()
     private val currentUser
         get() = FirebaseAuth.getInstance().currentUser
 
